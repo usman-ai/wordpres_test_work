@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example custom styles */
+.container {
+  padding: 0 20px;
+}
+
+/* Responsive grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+Product details card .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Typography */
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.menu > ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.woocommerce-tabs {
+  display: none; /* Hide by default */
+}
+
+/* Product Card Container */
+.product-card .summary.entry-summary {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card .summary.entry-summary:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Price */
+.product-card .price {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Addon Options */
+.product-card label.block {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Quantity Input */
+.product-card .quantity {
+  margin-bottom: 15px;
+}
+
+.product-card .input-text.qty {
+  width: 60px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Add to Cart Button */
+.product-card .single_add_to_cart_button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .single_add_to_cart_button:hover {
+  background-color: #0056b3;
+}
+
+/* Product Meta */
+.product-card .product_meta {
+  margin-top: 20px;
+}
+
+.product-card .sku_wrapper,
+.product-card .posted_in {
+  font-size: 14px;
+  color: #666666;
+}
+
+.product-card .sku_wrapper span,
+.product-card .posted_in a {
+  color: #007bff;
+}
+
+.product-card .sku_wrapper span::before {
+  content: "SKU: ";
+}
+
+.product-card .posted_in::before {
+  content: "Category: ";
+}
+
+.product-card .posted_in a:hover {
+  text-decoration: underline;
+}
+
+/* Shopping Cart Container */
+.product-cart .grid-cols-1.md\:grid-cols-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.product-cart .col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.product-cart .bg-white {
+  background-color: #ffffff;
+}
+
+.product-cart .rounded {
+  border-radius: 0.375rem;
+}
+
+.product-cart .shadow-md {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-cart .p-4 {
+  padding: 1rem;
+}
+
+/* Cart Table Styling */
+.product-cart table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-cart th,
+.product-cart td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+}
+
+.product-cart th {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+
+.product-cart tbody tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+/* Cart Totals */
+.product-cart .calculated_shipping {
+  padding: 1rem;
+}
+
+.product-cart .calculated_shipping h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.product-cart .shop_table_responsive {
+  width: 100%;
+}
+
+.product-cart .shop_table_responsive th {
+  text-align: left;
+}
+
+.product-cart .shop_table_responsive td {
+  text-align: right;
+}
+
+/* Proceed to Checkout Button */
+.product-cart .wc-proceed-to-checkout {
+  margin-top: 1rem;
+}
+
+.product-cart .checkout-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.product-cart .checkout-button:hover {
+  background-color: #0056b3;
+}
+
+/* Remove Button Styles */
+.remove-button {
+  background-color: #ffcccc; /* Light red background */
+  color: #ffffff; /* White text */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #ff9999; /* Darker red on hover */
+}
+
+/* Checkout Form Styles */
+.form-checkout-container .checkout {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.form-checkout-container .col2-set {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-checkout-container .col-1,
+.form-checkout-container .col-2 {
+  flex: 0 0 48%;
+}
+
+.form-checkout-container .woocommerce-billing-fields h3,
+.form-checkout-container .woocommerce-shipping-fields h3 {
+  margin-top: 0;
+}
+
+/* Billing and Shipping Fields Styles */
+.form-checkout-container .woocommerce-billing-fields__field-wrapper,
+.form-checkout-container .woocommerce-shipping-fields__field-wrapper,
+.form-checkout-container .woocommerce-additional-fields__field-wrapper {
+  margin-bottom: 20px;
+}
+
+.form-checkout-container .form-row {
+  margin-bottom: 10px;
+}
+
+.form-checkout-container .form-row label {
+  font-weight: bold;
+}
+
+.form-checkout-container .input-text {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Order Review Table Styles */
+.form-checkout-container #order_review_heading {
+  margin-top: 20px;
+}
+
+.form-checkout-container .shop_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-checkout-container .shop_table th,
+.form-checkout-container .shop_table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.form-checkout-container .shop_table th {
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.form-checkout-container .shop_table .product-name {
+  width: 70%;
+}
+
+.form-checkout-container .shop_table .product-total {
+  width: 30%;
+}
+
+/* Payment Methods Styles */
+.form-checkout-container .payment_methods {
+  list-style: none;
+  padding: 0;
+}
+
+.form-checkout-container .payment_methods li {
+  margin-bottom: 10px;
+}
+
+.form-checkout-container .payment_box {
+  margin-left: 20px;
+}
+
+/* Place Order Button Styles */
+.form-checkout-container .place-order button {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-checkout-container .place-order button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Terms and Conditions Styles */
+.form-checkout-container .woocommerce-terms-and-conditions-wrapper {
+  margin-top: 20px;
+}
+
+.form-checkout-container .woocommerce-terms-and-conditions-text {
+  font-size: 14px;
+}
+
+/* Update Totals Button Styles */
+.form-checkout-container .place-order .button.alt {
+  background-color: #008cba; /* Blue background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-checkout-container .place-order .button.alt:hover {
+  background-color: #0073aa; /* Darker blue on hover */
+}
+
+/* Privacy Policy Link Styles */
+.form-checkout-container .woocommerce-privacy-policy-link {
+  color: #008cba; /* Blue color */
+}
+
+.form-checkout-container .woocommerce-privacy-policy-link:hover {
+  text-decoration: underline;
+}
