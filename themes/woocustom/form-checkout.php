@@ -5,7 +5,7 @@ Template Name: Checkout Template
 get_header();
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+	exit; // Exit if accessed directly.
 }
 
 $checkout = WC()->checkout;
