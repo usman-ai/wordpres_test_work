@@ -64,19 +64,6 @@ get_header(); ?>
 
 			// Update total price on the page
 			priceElement.innerText = 'Total: ' + total;
-
-			// Send AJAX request to update cart
-			const data = {
-				action: 'update_cart',
-				total: total,
-				addons: selectedAddons,
-				quantity: quantity
-			};
-
-			jQuery.post('<?php echo admin_url( 'admin-ajax.php' ); ?>', data, function(response) {
-				// Handle response if needed
-				console.log(response);
-			});
 		}
 
 		function calculateTotal(basePrice, selectedAddons, quantity) {
